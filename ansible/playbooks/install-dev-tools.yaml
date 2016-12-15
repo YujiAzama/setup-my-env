@@ -1,0 +1,33 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  tasks:
+    - name: Install Git
+      apt:
+        name: git
+        state: latest
+
+    - name: Install Python dev
+      apt:
+        name: python-dev
+        state: latest
+
+    - name: Install virtualenv
+      apt:
+        name: virtualenv
+        state: latest
+
+    - name: Install vim
+      apt:
+        name: vim
+        state: latest
+
+    - name: Install Pip command
+      apt:
+        name: python-pip
+        state: latest
+
+    - name: Download .vimrc from GitHub my public Repo
+      get_url:
+        url: https://raw.githubusercontent.com/YujiAzama/vimrc/master/.vimrc
+        dest: ~/.vimrc
