@@ -17,5 +17,6 @@ $ git clone https://github.com/YujiAzama/setup-my-env.git
 ### Playbookの実行
 
 ```bash
-$ ansible-playbook -i playbooks/install-dev-tools.yaml
+$ cd setup-my-env/ansible/
+$ ansible-playbook playbooks/install-dev-tools.yaml
 ```
